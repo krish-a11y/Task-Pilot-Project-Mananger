@@ -12,9 +12,10 @@ interface FilterDialogProps {
     priority: string[];
     assignee: string[];
     dueDate: string | null;
+    dueStatus: string | null;
   };
   onFilterChange: (
-    type: "priority" | "assignee" | "dueDate",
+    type: "priority" | "assignee" | "dueDate" | "dueStatus",
     value: string | string[] | null,
   ) => void;
   onClearFilters: () => void;
@@ -57,6 +58,29 @@ export function FilterDialog({
             ))}
           </div>
         </div>
+        <div className="space-y-2">
+          <Label>Due Status</Label>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { label: "All", value: null },
+              { label: "Due soon", value: "due-soon" },
+              { label: "Overdue", value: "overdue" },
+              { label: "On track", value: "on-track" },
+            ].map((status, key) => (
+              <Button
+                key={key}
+                onClick={() => onFilterChange("dueStatus", status.value)}
+                variant={
+                  filters.dueStatus === status.value ? "default" : "outline"
+                }
+                className="cursor-pointer"
+              >
+                {status.label}
+              </Button>
+            ))}
+          </div>
+        </div>
+
         <div className="space-y-2">
           <Label>Due Date</Label>
           <Input

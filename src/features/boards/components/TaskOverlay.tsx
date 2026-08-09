@@ -3,21 +3,36 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Task } from "@/lib/supabase/models";
 import { Calendar, User } from "lucide-react";
-import { getPriorityColor } from "../utils";
+import { Badge } from "@/components/ui/badge";
+import { getPriorityColor, formatDueStatus, getDueStatus } from "../utils";
 
 interface TaskOverlayProps {
   task: Task;
 }
 
 export function TaskOverlay({ task }: TaskOverlayProps) {
+  const dueStatus = getDueStatus(task.due_date);
+
   return (
     <Card className="cursor-pointer hover:shadow-md transition-shadow">
       <CardContent className="p-3 sm:p-4">
         <div className="space-y-2 sm:space-y-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-start justify-between gap-2">
             <h4 className="font-medium text-gray-900 text-sm leading-tight flex-1 min-w-0 pr-2">
               {task.title}
             </h4>
+            <Badge
+              variant={
+                dueStatus === "overdue"
+                  ? "destructive"
+                  : dueStatus === "due-soon"
+                    ? "secondary"
+                    : "outline"
+              }
+              className="text-[11px] uppercase tracking-[0.16em]"
+            >
+              {formatDueStatus(dueStatus)}
+            </Badge>
           </div>
           <p className="text-xs text-gray-600 line-clamp-2">
             {task.description || "No description"}

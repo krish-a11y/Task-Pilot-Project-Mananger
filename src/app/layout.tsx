@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trello Clone",
-  description: "A modern project management tool inspired by Trello",
+  title: "Task Pilot",
+  description:
+    "A modern project management tool for task boards and collaboration",
 };
 
 export default function RootLayout({
@@ -27,15 +28,12 @@ export default function RootLayout({
   return (
     <ClerkProvider
       appearance={{
-        baseTheme: undefined,
         variables: {
           colorPrimary: "#2563eb",
         },
       }}
       signInUrl="/sign-in"
       signUpUrl="/sign-up"
-      afterSignInUrl="/dashboard"
-      afterSignUpUrl="/dashboard"
     >
       <html lang="en">
         <body

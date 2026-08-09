@@ -5,7 +5,8 @@ import { Task } from "@/lib/supabase/models";
 import { Calendar, Trash2, User } from "lucide-react";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { getPriorityColor } from "../utils";
+import { Badge } from "@/components/ui/badge";
+import { getPriorityColor, formatDueStatus, getDueStatus } from "../utils";
 
 interface SortableTaskProps {
   task: Task;
@@ -27,21 +28,29 @@ export function SortableTask({ task, onDeleteTask }: SortableTaskProps) {
     transform: CSS.Transform.toString(transform),
     opacity: isDragging ? 0.5 : 1,
   };
+  const dueStatus = getDueStatus(task.due_date);
+
   return (
     <div ref={setNodeRef} style={styles} {...attributes} {...listeners}>
       <Card className="cursor-pointer hover:shadow-md transition-shadow">
         <CardContent className="p-3 sm:p-4">
           <div className="space-y-2 sm:space-y-3">
-            <div className="flex items-center justify-between">
+            <div className="flex items-start justify-between gap-2">
               <h4 className="font-medium text-gray-900 text-sm leading-tight flex-1 min-w-0 pr-2">
                 {task.title}
               </h4>
-              <div
-                className="p-1.5 hover:bg-gray-100 rounded-md group"
-                onClick={() => onDeleteTask(task.id)}
+              <Badge
+                variant={
+                  dueStatus === "overdue"
+                    ? "destructive"
+                    : dueStatus === "due-soon"
+                      ? "secondary"
+                      : "outline"
+                }
+                className="text-[11px] uppercase tracking-[0.16em]"
               >
-                <Trash2 className="text-red-400 cursor-pointer group-hover:text-red-500 w-[15px] h-[15px]" />
-              </div>
+                {formatDueStatus(dueStatus)}
+              </Badge>
             </div>
             <p className="text-xs text-gray-600 line-clamp-2">
               {task.description || "No description"}

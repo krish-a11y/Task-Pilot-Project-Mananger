@@ -17,6 +17,7 @@ import {
   useSensors,
 } from "@dnd-kit/core";
 import { TaskOverlay } from "./TaskOverlay";
+import { getDueStatus } from "../utils";
 import { BoardHeader } from "./BoardHeader";
 import { BoardColumns } from "./BoardColumns";
 import { EditBoardDialog } from "./EditBoardDialog";
@@ -26,6 +27,7 @@ import { CreateColumnDialog } from "./CreateColumnDialog";
 import { DeleteTaskDialog } from "./DeleteTaskDialog";
 import { EditColumnDialog } from "./EditColumnDialog";
 import { DeleteColumnDialog } from "./DeleteColumnDialog";
+import { BoardInsights } from "./BoardInsights";
 import { useBoard } from "../hooks/useBoard";
 
 export default function Board() {
@@ -66,6 +68,7 @@ export default function Board() {
     priority: [] as string[],
     assignee: [] as string[],
     dueDate: null as string | null,
+    dueStatus: null as string | null,
   });
 
   const sensors = useSensors(
@@ -77,7 +80,7 @@ export default function Board() {
   );
 
   const handleFilterChange = (
-    type: "priority" | "assignee" | "dueDate",
+    type: "priority" | "assignee" | "dueDate" | "dueStatus",
     value: string | string[] | null,
   ) => {
     setFilters((prev) => ({
@@ -91,6 +94,7 @@ export default function Board() {
       priority: [] as string[],
       assignee: [] as string[],
       dueDate: null as string | null,
+      dueStatus: null as string | null,
     });
   };
 
@@ -267,6 +271,13 @@ export default function Board() {
         }
       }
 
+      if (filters.dueStatus) {
+        const status = getDueStatus(task.due_date);
+        if (status !== filters.dueStatus) {
+          return false;
+        }
+      }
+
       return true;
     }),
   }));
@@ -316,6 +327,8 @@ export default function Board() {
             onCreateColumn={() => setIsCreatingColumn(true)}
             onCreateTask={() => setIsCreatingTask(true)}
           />
+
+          <BoardInsights columns={filteredColumns} />
 
           <DndContext
             sensors={sensors}
