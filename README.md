@@ -4,7 +4,7 @@ A modern, full-stack project management platform designed to help teams organize
 
 ## Team Name
 
-**Team Trello**
+**Band Of Brothers**
 
 ---
 
