@@ -279,4 +279,4 @@ By combining **Next.js, TypeScript, Supabase, Clerk, Tailwind CSS, Shadcn UI, an
 ## Project Links
 
 * **GitHub:** https://github.com/krish-a11y/Task-Pilot-Project-Mananger
-* **Live Demo:** *Add deployed application URL*
+* **Live Demo:** *https://task-pilot-project-mananger-psi.vercel.app/*
