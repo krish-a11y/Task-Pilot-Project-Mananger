@@ -156,7 +156,7 @@ https://github.com/krish-a11y/Task-Pilot-Project-Mananger
 
 ### Team Name
 
-**Team Trello**
+**Band Of Brothers**
 
 ---
 
