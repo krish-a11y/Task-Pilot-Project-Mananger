@@ -39,13 +39,13 @@ export default function AuthForm({
           {mode === "sign-in" ? (
             <SignIn
               appearance={commonAppearance}
-              redirectUrl={redirectUrl}
+              fallbackRedirectUrl={redirectUrl}
               signUpUrl={alternateUrl}
             />
           ) : (
             <SignUp
               appearance={commonAppearance}
-              redirectUrl={redirectUrl}
+              fallbackRedirectUrl={redirectUrl}
               signInUrl={alternateUrl}
             />
           )}

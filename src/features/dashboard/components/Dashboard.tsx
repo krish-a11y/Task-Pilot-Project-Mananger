@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import { Board } from "@/lib/supabase/models";
 import { useState } from "react";
 import { useBoards } from "../hooks/useBoards";
-import { usePlan } from "../hooks/usePlan";
+import { usePlan } from "../hooks/usePlans";
 import { UpgradeDialog } from "./UpgradeDialog";
 import { FilterDialog } from "./FilterDialog";
 import { BoardsSection } from "./BoardsSection";

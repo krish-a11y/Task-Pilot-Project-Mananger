@@ -1,6 +1,6 @@
 "use client";
 
-import { BaseDialog } from "@/components/common/BaseDialog";
+import { BaseDialog } from "@/components/common/BasicDialog";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 

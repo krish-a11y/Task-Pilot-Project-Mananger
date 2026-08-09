@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { BaseDialog } from "@/components/common/BaseDialog";
+import { BaseDialog } from "@/components/common/BasicDialog";
 
 interface CreateTaskDialogProps {
   isOpen: boolean;

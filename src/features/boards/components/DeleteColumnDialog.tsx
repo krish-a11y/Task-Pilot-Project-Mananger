@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { BaseDialog } from "@/components/common/BaseDialog";
+import { BaseDialog } from "@/components/common/BasicDialog";
 
 interface DeleteColumnDialogProps {
   isOpen: boolean;
