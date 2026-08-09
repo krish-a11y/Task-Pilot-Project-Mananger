@@ -29,18 +29,21 @@ export default function NotFoundPagePartial() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
-              <Link href="/dashboard" className="flex items-center gap-2">
-                <Home className="w-4 h-4" />
-                Go to Dashboard
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/" className="flex items-center gap-2">
-                <ArrowLeft className="w-4 h-4" />
-                Back to Home
-              </Link>
-            </Button>
+            <Link
+              href="/dashboard"
+              className="inline-flex h-9 items-center justify-center gap-2 rounded-lg bg-blue-600 px-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700"
+            >
+              <Home className="w-4 h-4" />
+              Go to Dashboard
+            </Link>
+
+            <Link
+              href="/"
+              className="inline-flex h-9 items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-2.5 text-sm font-medium text-gray-900 transition-all hover:bg-gray-100"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Home
+            </Link>
           </div>
           <Card className="max-w-2xl mx-auto">
             <CardContent className="p-6 sm:p-8">
