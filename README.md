@@ -378,7 +378,7 @@ Task Pilot demonstrates the practical implementation of:
 
 * **Krishna Ghogare** — [mnshghogare@gmail.com](mailto:mnshghogare@gmail.com)
 * **Akash Harkar** — [akashharkar03v@gmail.com](mailto:akashharkar03v@gmail.com)
-* **Satej Gujar** 
+* **Satej Gujar** - [satejgujar198@gmail.com](mailto:satejgujar198@gmail.com)
 
 For project-related queries, collaboration, or feedback, please use the GitHub repository.
 
