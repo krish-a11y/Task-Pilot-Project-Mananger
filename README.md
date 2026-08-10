@@ -7,7 +7,7 @@
 ### 👥 Team Members
 
 - **Krishna Ghogare**
-- **Akash Harkar**
+- ** akash ** 
 - **Satej Gujar**
 
 ---
