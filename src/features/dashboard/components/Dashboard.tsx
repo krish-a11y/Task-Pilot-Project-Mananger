@@ -4,8 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import { Board } from "@/lib/supabase/models";
 import { useState } from "react";
 import { useBoards } from "../hooks/useBoards";
-import { usePlan } from "../hooks/usePlans";
-import { UpgradeDialog } from "./UpgradeDialog";
 import { FilterDialog } from "./FilterDialog";
 import { BoardsSection } from "./BoardsSection";
 import { StatsSection } from "./StatsSection";
@@ -14,10 +12,8 @@ import { ErrorState } from "@/components/common/Error";
 
 export default function Dashboard() {
   const { createBoard, boards, loading, error, refetch } = useBoards();
-  const { isFreeUser } = usePlan();
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
-  const [showUpgradeDialog, setShowUpgradeDialog] = useState<boolean>(false);
   const [filters, setFilters] = useState({
     search: "",
     dateRange: {
@@ -30,7 +26,7 @@ export default function Dashboard() {
     },
   });
 
-  const canCreateBoard = !isFreeUser || boards.length < 1;
+  const canCreateBoard = true;
 
   function clearFilters() {
     setFilters({
@@ -47,11 +43,6 @@ export default function Dashboard() {
   }
 
   const handleCreateBoard = async () => {
-    console.log("canCreateBoard", canCreateBoard);
-    if (!canCreateBoard) {
-      setShowUpgradeDialog(true);
-      return;
-    }
     await createBoard({
       title: "New Board",
     });
@@ -122,9 +113,9 @@ export default function Dashboard() {
           onFilterClick={() => setIsFilterOpen(true)}
           onCreateBoard={handleCreateBoard}
           activeFilterCount={activeFilterCount}
-          isFreeUser={isFreeUser}
           onSearchChange={handleSearchChange}
           searchValue={filters.search}
+          isFreeUser={false}
         />
       </main>
       <FilterDialog
@@ -133,11 +124,6 @@ export default function Dashboard() {
         filters={filters}
         onFiltersChange={setFilters}
         onClearFilters={clearFilters}
-      />
-
-      <UpgradeDialog
-        isOpen={showUpgradeDialog}
-        onOpenChange={setShowUpgradeDialog}
       />
     </div>
   );
