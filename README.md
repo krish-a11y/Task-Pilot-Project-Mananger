@@ -354,7 +354,7 @@ Task Pilot demonstrates the practical implementation of:
 
 # 📞 Contact
 
-- **Krishna Ghogare** — https://github.com/krish-a11y
+- **Krishna Ghogare** — mnshghogare@gmail.com
 - **Akash Harkar**
 - **Satej Gujar**
 
