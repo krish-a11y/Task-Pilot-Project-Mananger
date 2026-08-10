@@ -1,282 +1,400 @@
-# Task Pilot
+# 🚀 Task Pilot — Project Management Platform
 
-A modern, full-stack project management platform designed to help teams organize projects, manage tasks, track progress, and collaborate efficiently through an intuitive Kanban-style workflow.
+### *Plan. Organize. Track. Accomplish.*
 
-## Team Name
+**Team Name:** Band Of Brothers
 
-**Band Of Brothers**
+### 👥 Team Members
 
----
-
-## Problem Statement
-
-Managing projects and tasks efficiently can become difficult when information is scattered across different tools, communication channels, and documents.
-
-Teams need a centralized platform where they can:
-
-* Organize projects and tasks
-* Assign responsibilities
-* Track task progress
-* Manage deadlines
-* Monitor project workflows
-* Collaborate efficiently
-
-Traditional task-management methods can make it difficult to get a clear overview of project progress and identify pending or overdue tasks.
-
-**Task Pilot** addresses this problem by providing a centralized project management platform with an interactive Kanban-based workflow for organizing and tracking tasks.
+- **Krishna Ghogare**
+- **Akash Harkar**
+- **Satej Gujar**
 
 ---
 
-## Solution Overview
+## 🌟 Project Overview
 
-**Task Pilot** is a project management platform that allows teams to manage their projects and tasks from a single centralized dashboard.
+**Task Pilot** is a modern full-stack project management platform designed to help individuals and teams organize projects, manage tasks, and track progress efficiently. The platform provides an intuitive Kanban-based workflow where users can create project boards, organize tasks into different stages, assign responsibilities, set priorities and deadlines, and monitor project activity from a centralized dashboard.
 
-The platform provides a Kanban-style interface where tasks can be organized into different workflow stages and moved between them using drag-and-drop functionality.
-
-### Key capabilities include:
-
-* Create and manage project boards
-* Create, edit, and delete tasks
-* Organize tasks using Kanban columns
-* Drag and drop tasks between columns
-* Assign tasks to team members
-* Set task priorities
-* Set task due dates
-* Search and filter tasks
-* Track project progress
-* Secure user authentication
-* Centralized database management
-* Subscription-based functionality
-
-Task Pilot provides a simple visual representation of project progress, helping teams understand what needs to be done, what is currently in progress, and what has been completed.
+Task Pilot combines a clean, responsive interface with secure authentication, database management, drag-and-drop task organization, filtering, and subscription-based functionality to provide a complete project management experience.
 
 ---
 
-## Key Features
+## ✨ Key Features
 
-### Project & Board Management
+### 🎯 Core Functionality
 
-* Create and manage project boards
-* Organize projects using Kanban boards
-* Manage project workflows
-* Centralized project dashboard
+- **Project Board Management** — Create and manage project boards from a centralized dashboard.
+- **Task Management** — Create, edit, delete, assign, and organize tasks.
+- **Kanban Workflow** — Visually manage tasks across different workflow stages.
+- **Drag-and-Drop Tasks** — Easily move tasks between columns.
+- **Task Priorities** — Assign priorities to help teams focus on important work.
+- **Due Dates** — Set deadlines and track upcoming tasks.
+- **Task Assignment** — Assign tasks to specific team members.
+- **Search & Filtering** — Quickly find tasks based on different criteria.
+- **Project Statistics** — View total boards, active projects, and recent activity.
 
-### Task Management
+### 🔐 Authentication & Security
 
-* Create new tasks
-* Edit existing tasks
-* Delete tasks
-* Add task descriptions
-* Assign tasks to users
-* Set task priorities
-* Set due dates
-* Move tasks between columns using drag and drop
+- Secure authentication using **Clerk**
+- Sign-in and sign-up functionality
+- Protected dashboard routes
+- User-specific project data
+- Supabase Row Level Security (RLS)
 
-### Search & Filtering
+### 🎨 User Experience
 
-Users can quickly find relevant tasks using:
+- Modern responsive interface
+- Clean dashboard design
+- Interactive Kanban boards
+- Responsive layouts for desktop, tablet, and mobile
+- Reusable UI components
+- Intuitive navigation and task management
 
-* Task search
-* Priority filtering
-* Assignee filtering
-* Due-date filtering
+### 🚀 Advanced Features
 
-### Authentication & Security
-
-* Secure user authentication
-* User management using Clerk
-* User-specific project data
-* Supabase Row Level Security (RLS)
-
-### Subscription Management
-
-* Free plan functionality
-* Premium subscription options
-* Additional features for premium users
-
-### Responsive UI
-
-* Modern and responsive interface
-* Tailwind CSS styling
-* Shadcn UI components
-* Interactive Kanban board
-* User-friendly dashboard
+- Drag-and-drop functionality using `@dnd-kit`
+- Supabase PostgreSQL database
+- Subscription-based plans
+- Project activity tracking
+- Task filtering and searching
+- Protected application routes
+- Responsive dashboard
 
 ---
 
-## Live Demonstration Link
+## 🛠️ Technology Stack
 
-**Live Demo:**
-*Add the deployed Vercel URL here.*
+| Category | Technologies |
+|---|---|
+| **Framework** | Next.js 16 |
+| **Language** | TypeScript |
+| **Frontend** | React |
+| **Styling** | Tailwind CSS |
+| **UI Components** | Shadcn UI |
+| **Authentication** | Clerk |
+| **Database** | Supabase PostgreSQL |
+| **Drag & Drop** | @dnd-kit |
+| **Icons** | Lucide React |
+| **Utilities** | Class Variance Authority, clsx, Tailwind Merge |
+| **Deployment** | Vercel |
+| **Version Control** | Git & GitHub |
 
 ---
 
-## GitHub Repository
+## 📁 Project Structure
 
-**Repository:**
+    Task-Pilot-Project-Mananger/
+    │
+    ├── public/
+    │   └── Static assets
+    │
+    ├── src/
+    │   │
+    │   ├── app/
+    │   │   ├── dashboard/
+    │   │   ├── boards/
+    │   │   ├── sign-in/
+    │   │   ├── sign-up/
+    │   │   └── layout.tsx
+    │   │
+    │   ├── components/
+    │   │   ├── ui/
+    │   │   ├── layout/
+    │   │   ├── common/
+    │   │   └── page-partial/
+    │   │
+    │   ├── features/
+    │   │   ├── dashboard/
+    │   │   └── boards/
+    │   │
+    │   ├── lib/
+    │   │   └── supabase/
+    │   │
+    │   └── proxy.ts
+    │
+    ├── package.json
+    ├── next.config.ts
+    ├── tsconfig.json
+    ├── postcss.config.mjs
+    └── README.md
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+Make sure the following are installed:
+
+- Node.js 20+
+- npm
+- Git
+- A Supabase account
+- A Clerk account
+
+## Installation & Setup
+
+### 1. Clone the Repository
+
+    git clone https://github.com/krish-a11y/Task-Pilot-Project-Mananger.git
+    cd Task-Pilot-Project-Mananger
+
+### 2. Install Dependencies
+
+    npm install
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the project root and add:
+
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+    CLERK_SECRET_KEY=your_clerk_secret_key
+
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+    NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/dashboard
+    NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/dashboard
+
+    NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+> **Important:** Never commit your `.env` file or secret keys to GitHub.
+
+### 4. Start the Development Server
+
+    npm run dev
+
+The application will be available at:
+
+    http://localhost:3000
+
+---
+
+# 🌐 Live Deployment
+
+### 🚀 Production Application
+
+**Task Pilot Live:**  
+https://task-pilot-project-mananger-psi.vercel.app/
+
+### 📂 GitHub Repository
+
+**Source Code:**  
 https://github.com/krish-a11y/Task-Pilot-Project-Mananger
 
 ---
 
-## Technology Stack
+# 🎮 User Experience Journey
 
-### Frontend
+### 1. 🔐 Authentication
 
-* **Next.js** – React framework using the App Router
-* **TypeScript** – Type-safe application development
-* **Tailwind CSS** – Utility-first CSS framework
-* **Shadcn UI** – Reusable UI components
-* **Lucide React** – Icon library
+Users can create an account or sign in securely using Clerk.
 
-### Backend & Database
+    Sign Up / Sign In
+           ↓
+      Authentication
+           ↓
+        Dashboard
 
-* **Supabase** – PostgreSQL database and backend services
-* **Clerk** – Authentication and user management
-* **Supabase Row Level Security (RLS)** – Database-level access control
+### 2. 📊 Dashboard
 
-### Drag & Drop
+After authentication, users can access the Task Pilot dashboard where they can:
 
-* **@dnd-kit** – Drag-and-drop functionality for Kanban tasks
+- View existing project boards
+- Create new boards
+- Monitor recent activity
+- View project statistics
 
-### Deployment & Development
+### 3. 📋 Project Boards
 
-* **Vercel** – Deployment and hosting
-* **ESLint** – Code quality and linting
-* **PostCSS** – CSS processing
+Users can open a project board and organize tasks into different Kanban columns.
 
----
+    ┌─────────────┐
+    │    To Do    │
+    ├─────────────┤
+    │ Task 1      │
+    │ Task 2      │
+    └─────────────┘
 
-## Team Members
+    ┌─────────────┐
+    │ In Progress │
+    ├─────────────┤
+    │ Task 3      │
+    └─────────────┘
 
-| Name                | Role      |
-| ------------------- | --------- |
-| **Krishna Ghogare** | Developer |
-| **Akash Harkar**    | Developer |
-| **Satej Gujar**     | Developer |
+    ┌─────────────┐
+    │  Completed  │
+    ├─────────────┤
+    │ Task 4      │
+    └─────────────┘
 
-### Team Name
+### 4. 📝 Task Management
 
-**Band Of Brothers**
+Users can:
 
----
+- Create tasks
+- Assign tasks
+- Set priorities
+- Set deadlines
+- Edit tasks
+- Delete tasks
+- Move tasks between columns
 
-## Setup Instructions
+### 5. 🔎 Search & Filtering
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/krish-a11y/Task-Pilot-Project-Mananger.git
-```
-
-### 2. Navigate to the Project
-
-```bash
-cd Task-Pilot-Project-Mananger
-```
-
-### 3. Install Dependencies
-
-```bash
-npm install
-```
-
-### 4. Configure Environment Variables
-
-Create a `.env` file in the root directory.
-
-Add the required Clerk credentials:
-
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
-```
-
-Add the required Supabase credentials:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-Replace the placeholder values with the credentials from your Clerk and Supabase projects.
-
-### 5. Start the Development Server
-
-```bash
-npm run dev
-```
-
-### 6. Open the Application
-
-Open the following URL in your browser:
-
-```text
-http://localhost:3000
-```
+Tasks can be filtered and searched to quickly identify relevant work and project information.
 
 ---
 
-## Project Structure
+# 📱 Responsive Design
 
-```text
-Task-Pilot-Project-Mananger/
-│
-├── public/              # Static assets
-├── src/                 # Application source code
-│   ├── app/             # Next.js application routes
-│   ├── components/      # Reusable UI components
-│   ├── features/        # Feature-specific functionality
-│   ├── lib/             # Utility functions and integrations
-│   └── ...
-│
-├── package.json         # Project dependencies and scripts
-├── next.config.ts       # Next.js configuration
-├── tsconfig.json        # TypeScript configuration
-└── README.md            # Project documentation
-```
+Task Pilot is designed to provide a consistent experience across different screen sizes.
+
+- **Mobile:** Optimized for smaller screens
+- **Tablet:** Responsive layouts and navigation
+- **Desktop:** Full project management experience
 
 ---
 
-## Application Workflow
+# 🔒 Security
 
-1. The user signs up or logs in using Clerk authentication.
-2. The user accesses the Task Pilot dashboard.
-3. The user creates a project board.
-4. Tasks are created and organized into Kanban columns.
-5. Tasks can be assigned to team members.
-6. Users can set task priorities and due dates.
-7. Tasks can be moved between columns using drag and drop.
-8. Project and task information is stored using Supabase.
-9. Users can search and filter tasks.
-10. Subscription functionality provides access to additional features.
+Task Pilot uses modern authentication and database security mechanisms.
 
----
+### Clerk
 
-## Deployment
+Clerk handles:
 
-Task Pilot can be deployed using **Vercel**.
+- User registration
+- User authentication
+- Session management
+- Protected routes
 
-Before deployment, configure all required environment variables in the Vercel project settings.
+### Supabase
 
-To create a production build locally:
+Supabase provides:
 
-```bash
-npm run build
-```
+- PostgreSQL database
+- Data storage
+- API access
+- Row Level Security
 
-The application can then be deployed through Vercel.
+The application uses user-specific data access to ensure that project information is associated with the appropriate authenticated users.
 
 ---
 
-## Conclusion
+# 📈 Project Workflow
 
-**Task Pilot** provides a centralized and intuitive solution for project and task management.
+The overall application workflow is:
 
-By combining **Next.js, TypeScript, Supabase, Clerk, Tailwind CSS, Shadcn UI, and @dnd-kit**, the platform provides a modern and scalable environment for managing projects, organizing tasks, tracking progress, and improving team productivity.
+    User
+     │
+     ▼
+    Authentication
+     │
+     ▼
+    Dashboard
+     │
+     ├───────────────┐
+     ▼               ▼
+    Create Board    View Boards
+     │               │
+     └───────┬───────┘
+             ▼
+        Project Board
+             │
+             ▼
+        Create Tasks
+             │
+             ▼
+     Assign / Prioritize
+             │
+             ▼
+      Drag & Drop Tasks
+             │
+             ▼
+        Track Progress
 
 ---
 
-## Project Links
+# 🏆 Project Highlights
 
-* **GitHub:** https://github.com/krish-a11y/Task-Pilot-Project-Mananger
-* **Live Demo:** *https://task-pilot-project-mananger-psi.vercel.app/*
+Task Pilot demonstrates the practical implementation of:
+
+- Full-stack web application development
+- Modern React and Next.js architecture
+- Authentication and authorization
+- Database integration
+- Kanban-based project management
+- Drag-and-drop interactions
+- Responsive UI development
+- Component-based architecture
+- Cloud deployment
+- Environment-based configuration
+
+---
+
+# 🚀 Future Enhancements
+
+- [ ] Real-time team collaboration
+- [ ] Task comments and discussions
+- [ ] File and document attachments
+- [ ] Email and push notifications
+- [ ] Advanced project analytics
+- [ ] Calendar integration
+- [ ] Activity history and audit logs
+- [ ] Team invitations
+- [ ] Advanced role-based permissions
+- [ ] Mobile application
+- [ ] AI-powered task suggestions
+- [ ] Automated project progress reports
+
+---
+
+# 📞 Contact
+
+- **Krishna Ghogare** — https://github.com/krish-a11y
+- **Akash Harkar**
+- **Satej Gujar**
+
+For project-related queries, collaboration, or feedback, please use the GitHub repository.
+
+---
+
+# 🙏 Acknowledgments
+
+We would like to thank:
+
+- **Clerk** for authentication infrastructure
+- **Supabase** for database and backend services
+- **Vercel** for deployment infrastructure
+- **Shadcn UI** for reusable UI components
+- **Lucide React** for the icon library
+- **dnd-kit** for drag-and-drop functionality
+- The open-source community for the tools and resources that supported the development of Task Pilot
+
+---
+
+## ⭐ Support the Project
+
+If you find **Task Pilot** useful or interesting, consider giving the repository a star.
+
+**GitHub:**  
+https://github.com/krish-a11y/Task-Pilot-Project-Mananger
+
+---
+
+## 🔗 Project Links
+
+| Resource | Link |
+|---|---|
+| 🚀 **Live Demo** | https://task-pilot-project-mananger.vercel.app/ |
+| 💻 **GitHub** | https://github.com/krish-a11y/Task-Pilot-Project-Mananger |
+| 👤 **Krishna Ghogare** | https://github.com/krish-a11y |
+
+---
+
+### Task Pilot
+
+**Plan. Organize. Track. Accomplish.**
